@@ -74,20 +74,27 @@ export function Projects() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <GlassCard className="h-full flex flex-col group overflow-hidden border-white/10 hover:border-white/20 transition-all duration-500">
+              <GlassCard 
+                className="h-full flex flex-col group overflow-hidden border-white/10 hover:border-white/20 transition-all duration-500 cursor-pointer"
+                onClick={(e) => {
+                  if ((e.target as HTMLElement).closest('a')) return;
+                  const targetUrl = project.links.live !== "#" ? project.links.live : project.links.github;
+                  if (targetUrl !== "#") window.open(targetUrl, "_blank");
+                }}
+              >
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
                 
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                    <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">{project.title}</h3>
                     <div className="flex gap-3">
                       {project.links.github !== "#" && (
-                        <a href={project.links.github} target="_blank" rel="noreferrer" className="text-white/50 hover:text-white transition-colors">
+                        <a href={project.links.github} target="_blank" rel="noreferrer" className="text-white/50 hover:text-white transition-colors p-1">
                           <IconBrandGithub size={20} />
                         </a>
                       )}
                       {project.links.live !== "#" && (
-                        <a href={project.links.live} target="_blank" rel="noreferrer" className="text-white/50 hover:text-cyan-400 transition-colors">
+                        <a href={project.links.live} target="_blank" rel="noreferrer" className="text-white/50 hover:text-cyan-400 transition-colors p-1">
                           <ExternalLink size={20} />
                         </a>
                       )}
