@@ -25,11 +25,22 @@ export function Contact() {
               I'm currently available for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             
-            <MagneticButton className="bg-white text-black hover:bg-white/90 text-lg px-8 py-4">
-              <a href="mailto:haroonurrasheed1212@gmail.com" className="flex items-center gap-2">
-                <Mail size={20} /> Say Hello
-              </a>
-            </MagneticButton>
+            <div className="flex flex-col items-center gap-6">
+              <MagneticButton className="bg-white text-black hover:bg-white/90 text-lg px-8 py-4 shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-300 hover:scale-105">
+                <a href="mailto:haroonurrasheed1212@gmail.com" className="flex items-center gap-2 font-medium">
+                  <Mail size={20} /> Say Hello
+                </a>
+              </MagneticButton>
+
+              <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-sm hover:bg-white/[0.08] transition-colors group cursor-pointer" onClick={() => navigator.clipboard.writeText('haroonurrasheed1212@gmail.com')}>
+                <span className="text-white/50 group-hover:text-blue-400 transition-colors">
+                  <Mail size={16} />
+                </span>
+                <span className="text-white/70 font-mono text-sm tracking-wide select-all group-hover:text-white transition-colors">
+                  haroonurrasheed1212@gmail.com
+                </span>
+              </div>
+            </div>
           </motion.div>
         </GlassCard>
       </div>
