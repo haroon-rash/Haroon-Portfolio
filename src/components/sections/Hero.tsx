@@ -47,7 +47,7 @@ export function Hero() {
                   </span>
                 </MagneticButton>
               </a>
-              <a href="https://drive.google.com/file/d/1KgdaxGFJeq1l8cSBuV73vNEqzaOED60Z/view?usp=sharing" target="_blank" rel="noreferrer">
+              <a href="https://drive.google.com/file/d/1B2klpwvjOPME_f3-HSlrfdueRiSyPORW/view?usp=sharing" target="_blank" rel="noreferrer">
                 <MagneticButton className="bg-transparent border border-white/10 text-white/70 hover:text-white hover:bg-white/5 transition-all duration-300">
                   <span className="flex items-center gap-2">
                     <Download size={18} /> Resume
