@@ -8,7 +8,7 @@ import { IconBrandGithubFilled, IconBrandLinkedinFilled, IconBrandLeetcode, Icon
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#030303]">
+    <section className="relative w-full min-h-screen overflow-hidden bg-[#030303]">
       {/* Ultra-Dark Premium Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.15)_0%,transparent_50%)]" />

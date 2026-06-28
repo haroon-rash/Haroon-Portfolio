@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "../ui/GlassCard";
-import { AnimatedCounter } from "../ui/AnimatedCounter";
+
 import { Server, Database, Code2, Rocket, Lock, GitBranch, TerminalSquare } from "lucide-react";
 import { IconBrandGithub } from "@tabler/icons-react";
 
@@ -83,7 +83,7 @@ export function Dashboard() {
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-white mb-2 flex items-baseline gap-1">
-                    <AnimatedCounter value={metric.value} />
+                    {metric.value}
                     <span className={metric.color}>+</span>
                   </div>
                   <h3 className="text-sm font-medium text-white/60">{metric.title}</h3>
